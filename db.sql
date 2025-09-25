@@ -26,6 +26,8 @@ CREATE TABLE `usuarios` (
     FOREIGN KEY(id_rol) REFERENCES roles(id_rol)
 );
 
+INSERT INTO usuarios(nombre, id_rol, email, telefono, documento, pass_hash, estado)
+VALUES ('prueba', 1, 'prueba@gmail.com', '312765654', '1088345678', '$2b$12$dqHqOjmV3VJKqnvcsFd4aOc/t4LpECbs8T5UJBk47sFUr9PwRsmkS', 1);
 
 CREATE TABLE `modulos` (
 	`id_modulo` SMALLINT NOT NULL AUTO_INCREMENT UNIQUE,

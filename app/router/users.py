@@ -14,8 +14,7 @@ modulo = 1
 @router.post("/crear", status_code=status.HTTP_201_CREATED)
 def create_user(
     user: UserCreate,
-    db: Session = Depends(get_db),
-    user_token: UserOut = Depends(get_current_user)
+    db: Session = Depends(get_db)
 ):  
     try:
         # el rol quien usa el endpoint
